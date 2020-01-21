@@ -4,6 +4,9 @@
 	include_once "bdd/bdd.php";
   	include_once "bdd/produits.php";
 
+  	// Include des modèles 
+  	include_once "modele/produits.php";
+
   	// Création des tableas dans la base de données
 
  	cree_table_produits();
