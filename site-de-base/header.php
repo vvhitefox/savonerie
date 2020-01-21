@@ -1,5 +1,4 @@
 <?php
-	
 	// Include des fichiers de la base de données
 
 	include_once "bdd/bdd.php";
@@ -26,7 +25,7 @@
 	Le vrai sens
 </div>
 
-<div class="row col-sm-8 offset-sm-2 border rounded bg-">
+<div class="row col-sm-8 offset-sm-2 border rounded">
 
 	<div class="col text-center">
 		<a href="boutique.php"> Boutique </a>
