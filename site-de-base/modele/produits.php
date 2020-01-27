@@ -163,6 +163,58 @@ function recup_liste_savon_barbe() {
 
 
 
+// Cette fonction permet de retourner une liste de produit qui contient dans son nom une chaine de 
+// caractères donnée en paramètre
+
+// Cette fonction prend en entier un tableau de produits, ainsi qu'une chaine de caractères
+
+// Retourne un tableau avec une liste de produit
+// Même format que dans la fonction recup_produit($id)
+
+
+
+function recup_liste_tri_nom($tab, $chaine){
+
+	
+
+	// On met la chaine en minuscule mieux comparer
+
+	$chaine = strtolower($chaine);
+
+	$chaine= strtr(	$chaine,
+   					"ÀÁÂÃÄÅàáâãäåÒÓÔÕÖØòóôõöøÈÉÊËèéêëÇçÌÍÎÏìíîïÙÚÛÜùúûüÿÑñ",
+   					"aaaaaaaaaaaaooooooooooooeeeeeeeecciiiiiiiiuuuuuuuuynn");
+
+	;
+
+	var_dump($chaine);
+	$resultat = [];
+
+	foreach ($tab as $val){
+
+		// On met le nom du produit de $val en minuscule pour comparer correctement
+		// le nom du produit ainsi que la chaine
+
+		$nom_produit = strtolower($val['nom']);
+
+		if(preg_match("#". $chaine . "#", $nom_produit)){
+
+
+			$resultat[] = $val;
+			
+		}
+		var_dump($nom_produit);
+	}
+
+	return $resultat;
+}
+
+
+
+///////////////////////////////////////
+
+
+
 // Cette fonction permet l'affichage des produits sur la page de la boutique
 
 // Cette fonction prend en entier un tableau de produits
