@@ -44,5 +44,5 @@ if ( $recherche != '' ){
 	$_SESSION['produits'] = recup_liste_tri_nom($_SESSION['produits'], $recherche);
 }
 
-//header('Location: ../boutique.php');
+header('Location: ../boutique.php');
 ?>
