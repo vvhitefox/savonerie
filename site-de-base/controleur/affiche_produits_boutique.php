@@ -2,7 +2,6 @@
 include "../bdd/bdd.php";
 include "../modele/produits.php";
 
-
 // On récupère le choix qui a été récupéré dans la liste déroulante
 
 if (isset($_POST['categorie'])){
