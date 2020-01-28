@@ -1,5 +1,60 @@
 <?php include_once("header.php"); ?>
+<script>
+			function ValidateEmail() 
+				{
+				 var button = document.getElementById("boutonvalidation");
+			     var champ = document.getElementById("champemail");
+				 if(!champ.value){
+					 champ.style.backgroundColor = "white";
+					 return;
+				 }
+				 if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(champ.value))
+				  {
+					button.classList.remove('disabled');
+					//button.classList.submit = true;
+					champ.style.backgroundColor = "lightgreen";
+					return;
+				  }
+				    button.classList.add('disabled');
+					//button.type = ""	;
+					champ.style.backgroundColor = "#FF7777";
+				}
+				
+				function sendEmail(){
+					 var champ = document.getElementById("champemail");
+					 if(!champ.value){
+						 alert("veulliez entrez un email");
+						 return;
+					 }
+					 if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(champ.value))
+					  {
+						alert("vous receverrez un email de confirmation");
+						return;
+					  }
+						alert("veulliez entrez un email valide");
+				}
+	</script>
 
+<div class="row">
+	<div class="col-sm-8 offset-sm-2 mt-3">
+		<div class="card border">
+
+		  	<div class="card-header align-center d-flex justify-content-center bg-success text-white">
+		  	Pourquoi ne pas vous inscrire a la newsletter ?
+		  	</div>
+
+		  	<div class="card-body">
+		  		<form method="post" action="accueil.php" id="postform">
+		  			<div class="row">
+						 <div class="col-sm-4 text-center">e-mail:</div> 
+						 <input name = "email" class = "form-control col-sm-4 ml-3"  onkeyup="ValidateEmail()" id="champemail"/>
+						<input type="submit" class="btn btn-outline-success col-sm-2 ml-2 disabled" onclick="sendEmail()" id="boutonvalidation" value="s'inscrire" style="float:left">
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
 <div class="row col-sm-8 offset-sm-2">
 	<section>
 	<h1>Quel sens ?</h1>
