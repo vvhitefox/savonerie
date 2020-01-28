@@ -17,3 +17,15 @@
 		mysqli_query($bdd,$sql);
 		return 0;
 	}
+
+	function cree_table_newsletter() {
+		global $bdd; 
+
+		$sql = "CREATE TABLE IF NOT EXISTS newsletter
+				(id_email	INT AUTO_INCREMENT,
+				email			VARCHAR(100) NOT NULL
+				);
+				";
+		mysqli_query($bdd,$sql);
+		return 0;
+	}
