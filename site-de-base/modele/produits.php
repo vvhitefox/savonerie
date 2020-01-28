@@ -175,37 +175,38 @@ function recup_liste_savon_barbe() {
 
 function recup_liste_tri_nom($tab, $chaine){
 
-	// On enlêve les accents de la chaine de caractères
+    // On enlêve les accents de la chaine de caractères
 
-	$chaine= strtr(utf8_decode($chaine), utf8_decode("âäàéèëêïîôöûüùççÂÀÉÊÏÎÛ"), "aaaeeeeiioouuuccaaeeiiu");
+    $chaine= strtr(utf8_decode($chaine), utf8_decode("âäàéèëêïîôöûüùççÂÀÉÊÏÎÛ"), "aaaeeeeiioouuuccaaeeiiu");
 
-	// On met la chaine en minuscule mieux comparer
+    // On met la chaine en minuscule mieux comparer
 
-	$chaine = strtolower($chaine);
+    $chaine = strtolower($chaine);
 
-	$resultat = [];
+    $resultat = [];
 
-	foreach ($tab as $val){
+    foreach ($tab as $val){
 
-		// On enlève les accents sur le nom porté par val
+        // On enlève les accents sur le nom porté par val
 
-		$nom_produit= strtr(utf8_decode($val['nom']), utf8_decode("âäàéèëêïîôöûüùççÂÀÉÊÏÎÛ"), "aaaeeeeiioouuuccaaeeiiu");
+        $nom_produit= strtr(utf8_decode($val['nom']), utf8_decode("âäàéèëêïîôöûüùççÂÀÉÊÏÎÛ"), "aaaeeeeiioouuuccaaeeiiu");
 
-		// On met le nom du produit de $val en minuscule pour comparer correctement
-		// le nom du produit ainsi que la chaine
+        // On met le nom du produit de $val en minuscule pour comparer correctement
+        // le nom du produit ainsi que la chaine
 
-		$nom_produit = strtolower($nom_produit);
+        $nom_produit = strtolower($nom_produit);
 
-		if(preg_match("#". $chaine . "#", $nom_produit)){
+        if(preg_match("#". $chaine . "#", $nom_produit)){
 
-			$resultat[] = $val;
-			
-		}
+            $resultat[] = $val;
+            
+        }
 
-	}
+    }
 
-	return $resultat;
+    return $resultat;
 }
+
 
 
 

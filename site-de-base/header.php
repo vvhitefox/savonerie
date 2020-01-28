@@ -21,40 +21,49 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+  <!-- Fichier CSS -->
+
+  <link rel="stylesheet" href="bootstrap/css/style.css">
+
 </head>
 <body>
 
-<div class="col-12 text-center bg-success text-white">
-	Le vrai sens
-</div>
 
-<div class="row col-sm-8 offset-sm-2 border rounded">
+	<header class="background-vert d-flex align-items-center justify-content-center">
+		<div style=""class="col-12 text-white ">
+		Le vrai sens
+		</div>	
+	</header>
 
-	<div class="col text-center">
-		<a href="boutique.php"> Boutique </a>
-	</div>
+<div class="reste_page container bg-white col-sm-8 offset-sm-2 pt-3">
 
-	<div class="col text-center">
-		<a href="mdf.php"> Méthodes de fabrication </a>
-	</div>
-	
-	<div class="col text-center">
-		<a href="accueil.php"> Accueil </a>
-	</div>
+	<div class="row col-sm-10 offset-sm-1 border rounded background-vert">
 
-	<div class="col text-center">
-		<a href="contact.php"> Nous contacter </a>
-	</div>
-	
-	<div class="col text-center">
-		<a href="a_propos.php"> A propos </a>
-	</div>
+		<div class="col text-center">
+			<a class="text-white" href="boutique.php"> Boutique </a>
+		</div>
 
-	<div class="col text-center">
-		<a href="admin.php"> Admin </a>
-	</div>
+		<div class="col text-center">
+			<a class="text-white" href="mdf.php"> Méthodes de fabrication </a>
+		</div>
+		
+		<div class="col text-center">
+			<a class="text-white" href="accueil.php"> Accueil </a>
+		</div>
 
-</div>
+		<div class="col text-center">
+			<a class="text-white" href="contact.php"> Nous contacter </a>
+		</div>
+		
+		<div class="col text-center">
+			<a class="text-white" href="a_propos.php"> A propos </a>
+		</div>
+
+		<div class="col text-center">
+			<a class="text-white" href="admin_index.php"> Admin </a>
+		</div>
+
+	</div>
 
 
 
