@@ -36,7 +36,7 @@
 	</script>
 
 <div class="row">
-	<div class="col-sm-8 offset-sm-2 mt-3">
+	<div class="col-lg-12 offset-sm-2 mt-3">
 		<div class="card border">
 
 		  	<div class="card-header align-center d-flex justify-content-center bg-success text-white">
