@@ -28,16 +28,16 @@
 </head>
 <body>
 
-
-	<header class="background-vert d-flex align-items-center justify-content-center">
-		<div style=""class="col-12 text-white ">
+<header class="background-vert d-flex align-items-center">
+	<div class="col-12 text-white text-center justify-content-center">
 		Le vrai sens
-		</div>	
-	</header>
+	</div>
+</header>
 
-<div class="reste_page container bg-white col-sm-8 offset-sm-2 pt-3">
 
-	<div class="row col-sm-10 offset-sm-1 border rounded background-vert">
+<div class="corps-page container bg-white col-sm-8 offset-sm-2 pt-3">
+
+	<div class="row col-sm-10 offset-sm-1 border rounded background-vert d-flex align-items-center">
 
 		<div class="col text-center">
 			<a class="text-white" href="boutique.php"> Boutique </a>

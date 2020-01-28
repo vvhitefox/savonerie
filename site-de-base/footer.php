@@ -7,13 +7,10 @@
 		</div>
 	</div>
 
-	<footer class="page-footer font-small blue background-vert">
-
-		  <!-- Copyright -->
-		  <div class="footer-copyright text-center py-3">© 2020 Copyright:
-		    <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
-		  </div>
-
+	<footer class="background-vert d-flex align-items-center">
+		<div class="col-12 text-white text-center justify-content-center">
+			Newsletter
+		</div>
 	</footer>
 
 </body>

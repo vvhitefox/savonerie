@@ -232,12 +232,12 @@ function affiche_tableau_produits($tab){
 								<div class='card'>
 									<img class='card-img-top' src='' alt=''>
 									<div class='card-body'>
-										<h5 class='card-title'> Produit</h5>
-										<p class='card-text'>". $val['nom'] ."</p>
+										<h5 class='card-title'>". $val['nom'] ."</h5>
 									</div>
 									<ul class='list-group list-group-flush'>
 										<li class='list-group-item'>Description</li>
-										<li class='list-group-item'>Ingrédients</li>
+										<li class='list-group-item'>Ingrédients : ". $val['ingredients'] ."</li>
+										<li class='list-group-item'>Prix : ". $val['prix'] ." &euro;</li>
 									</ul>
 								</div>
 							</div>";
@@ -249,12 +249,12 @@ function affiche_tableau_produits($tab){
 									<div class='card'>
 									  <img class='card-img-top' src='' alt=''>
 									  <div class='card-body'>
-									    <h5 class='card-title'> Produit</h5>
-									    <p class='card-text'>". $val['nom'] ."</p>
+									    <h5 class='card-title'>". $val['nom'] ."</h5>
 									  </div>
 									  <ul class='list-group list-group-flush'>
 									    <li class='list-group-item'>Description</li>
-									    <li class='list-group-item'>Ingrédients</li>
+									    <li class='list-group-item'>Ingrédients : ". $val['ingredients'] ." &euro;</li>
+
 									  </ul>
 									</div>
 								</div>";
