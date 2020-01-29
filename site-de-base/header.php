@@ -40,6 +40,10 @@
 	<div class="row col-sm-10 offset-sm-1 border rounded background-vert d-flex align-items-center">
 
 		<div class="col text-center">
+			<a class="text-white" href="accueil.php"> Accueil </a>
+		</div>
+
+		<div class="col text-center">
 			<a class="text-white" href="boutique.php"> Boutique </a>
 		</div>
 
@@ -48,15 +52,11 @@
 		</div>
 		
 		<div class="col text-center">
-			<a class="text-white" href="accueil.php"> Accueil </a>
+			<a class="text-white" href="a_propos.php"> A propos </a>
 		</div>
 
 		<div class="col text-center">
 			<a class="text-white" href="contact.php"> Nous contacter </a>
-		</div>
-		
-		<div class="col text-center">
-			<a class="text-white" href="a_propos.php"> A propos </a>
 		</div>
 
 		<div class="col text-center">
