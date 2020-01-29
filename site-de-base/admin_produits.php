@@ -1,10 +1,11 @@
 <?php
-include_once 'header.php';
+include_once 'admin_header.php';
+include_once 'vue/stock.php';
 ?>
 	<div class="container">
 		<h1>Liste des produits:</h1>
 		<div class="container">	
-	
+			<?php echo show_stock(); ?>
 		</div>
 	</div>
 
@@ -12,5 +13,5 @@ include_once 'header.php';
 
 
 <?php
-include_once 'footer.php';
+include_once 'admin_footer.php';
 ?>
