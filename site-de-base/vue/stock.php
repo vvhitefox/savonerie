@@ -1,6 +1,5 @@
-<?php include_once("header.php"); ?>
-
 <?php  
+include_once 'bdd/bdd.php';
   require("modele/produits.php");
 
 	function isAdmin(){return true;}
@@ -38,4 +37,3 @@
   }
 	
   ?>
-<?php include_once("footer.php"); ?>
