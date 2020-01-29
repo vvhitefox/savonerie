@@ -2,9 +2,7 @@
 
 <section>
 <div class="row col-sm-8 offset-sm-2">
-=======
 
->>>>>>> 941c29c0ddda41e19fda041e85900d55149fe102
 <h1>La Savonnerie</h1>
 <p>
  La Savonnerie Le Vrai Sens est situé dans le cœur du massif de la Chartreuse en Savoie, dans un petit village, à la campagne, à  St Thibaud de couz.</p>
