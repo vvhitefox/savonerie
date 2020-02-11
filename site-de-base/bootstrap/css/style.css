@@ -20,3 +20,11 @@ footer{
 .background-vert{
 	 background-color: #74C461;
 }
+
+.text-grey{
+	color: #797979;
+}
+
+.text-produit-size{
+	font-size: 12px;
+}

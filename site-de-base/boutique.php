@@ -41,6 +41,12 @@
 			
 		}
 
+		else{
+
+			affiche_tableau_produits(recup_liste_produits());
+
+		}
+
 		unset($_SESSION['produits']);
 
 		?>

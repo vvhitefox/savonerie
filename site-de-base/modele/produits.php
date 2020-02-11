@@ -226,45 +226,22 @@ function affiche_tableau_produits($tab){
 	$i = 0;
 		foreach ($tab as $val) {
 
-			switch ($i) {
-				case 0:
-					echo "	<div class='col-sm-6 mb-3 mt-3'>
-								<div class='card'>
-									<img class='card-img-top' src='' alt=''>
-									<div class='card-body'>
-										<h5 class='card-title'>". $val['nom'] ."</h5>
-									</div>
-									<ul class='list-group list-group-flush'>
-										<li class='list-group-item'>Description</li>
-										<li class='list-group-item'>Ingrédients : ". $val['ingredients'] ."</li>
-										<li class='list-group-item'>Prix : ". $val['prix'] ." &euro;</li>
-									</ul>
-								</div>
-							</div>";
-					$i = $i++;
-					break;
+			$chaine_id = (string)$val['id_produits'];
 
-				case 1:
-						echo "	<div class='col-sm-5 mb-3 mt-3'>
-									<div class='card'>
-									  <img class='card-img-top' src='' alt=''>
-									  <div class='card-body'>
-									    <h5 class='card-title'>". $val['nom'] ."</h5>
-									  </div>
-									  <ul class='list-group list-group-flush'>
-									    <li class='list-group-item'>Description</li>
-									    <li class='list-group-item'>Ingrédients : ". $val['ingredients'] ." &euro;</li>
+			echo "	<div class='col-sm-6 mb-3 mt-3'>
+						<div class='card'>
+							<a href='produit.php?id=". $chaine_id ."' >
+								<img src='https://www.lepetitmarseillais.com/sites/lpm_fr/files/taco-images/le-savon-de-marseille-le-produit-authentique-qui-a-tout-bon-ihp.jpg' class='card-img-top img-fluid mx-auto d-block' alt=''> 
+							</a>
 
-									  </ul>
-									</div>
-								</div>";
-					$i = 0;
-					break;
-				
-				default:
-
-					break;
-			}
+							<ul class='list-group list-group-flush'>
+								<li class='list-group-item'>". $val['nom'] ."</li>
+								<li class='list-group-item'>Description</li>
+								<li class='list-group-item'>Ingrédients : ". $val['ingredients'] ."</li>
+								<li class='list-group-item'>Prix : ". $val['prix'] ." &euro;</li>
+							</ul>
+						</div>
+					</div>";
 		}
 }
 
