@@ -37,6 +37,29 @@ function recup_produit($id) {
 	return $resultat;
 }
 
+// Cette fonction retourne une liste de tous les produits grâce à un type passé en paramètre qui sont déjà dans la base de données.
+// Cette fonction réutilise la fonction recup_produit($id)
+
+// Ne prend pas d'entrée
+
+// Retourne un tableau avec une liste de produits
+// Même format que dans la fonction recup_produit($id)
+
+
+
+function recup_liste_produits_type($type) {
+
+	global $bdd; 
+
+	$sql = "SELECT * FROM produits WHERE type = '$type'";
+	$resultat = [];
+	$res = mysqli_query($bdd,$sql);
+	while($row = mysqli_fetch_assoc($res)){
+		$resultat[] = recup_produit($row['id_produits']);
+	}
+	return $resultat;
+}
+
 
 
 // Cette fonction retourne une liste de tous les produits qui sont déjà dans la base de données.

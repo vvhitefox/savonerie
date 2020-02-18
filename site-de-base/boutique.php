@@ -34,10 +34,17 @@
 	<div class="col-sm-8 offset-sm-2 mt-3">
 		<div class="row">
 
-		<?php 
+		<?php
+		
 		if (isset($_SESSION['produits'])){
 			
 			affiche_tableau_produits($_SESSION['produits']);
+			
+		}
+
+		else if (isset($_GET['type'])){
+			
+			affiche_tableau_produits(recup_liste_produits_type($_GET['type']));
 			
 		}
 
@@ -48,6 +55,7 @@
 		}
 
 		unset($_SESSION['produits']);
+		
 
 		?>
 		</div>

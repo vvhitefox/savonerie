@@ -50,15 +50,17 @@
 		</div>
 
 		<div class="col text-center">
-			<a class="text-white" href="mdf.php"> Méthodes de fabrication </a>
-		</div>
-		
-		<div class="col text-center">
-			<a class="text-white" href="a_propos.php"> A propos </a>
-		</div>
+			<div class="dropdown show">
+				<a class="btn btn-secondary dropdown-toggle btn-success" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					A propos 
+				</a>
 
-		<div class="col text-center">
-			<a class="text-white" href="contact.php"> Nous contacter </a>
+				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				    <a class="dropdown-item" href="a_propos.php">Historique</a>
+				    <a class="dropdown-item" href="mdf.php">Méthodes de fabrication</a>
+				    <a class="dropdown-item" href="contact.php">Nous contacter</a>
+			  	</div>
+			</div>
 		</div>
 
 		<div class="col text-center">

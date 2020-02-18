@@ -17,24 +17,12 @@ if (isset($_POST['recherche'])){
 
 // On récupère le tableau de produit qui a été retourné grâce au choix de la liste déroulante
 
-if ($categorie == 'savon'){
-	$_SESSION['produits'] = recup_liste_savon();
-}
-
-else if ($categorie == 'baume'){
-	$_SESSION['produits'] = recup_liste_baume();
-}
-
-else if ($categorie == 'shampoing'){
-	$_SESSION['produits'] = recup_liste_shampoing();
-}
-
-else if ($categorie == 'savon_barbe'){
-	$_SESSION['produits'] = recup_liste_savon_barbe();
-}
-
-else if ($categorie == 'toutes'){
+if ($categorie == 'toutes'){
 	$_SESSION['produits']= recup_liste_produits();
+}
+
+else{
+	$_SESSION['produits']= recup_liste_produits_type($categorie);
 }
 
 // On regarde si du texte est rentré dans la barre de recherche, si oui, on applique un filtre pour ne récupérer que les
