@@ -11,7 +11,8 @@ include_once 'bdd/bdd.php';
 	  
 	  if(!isAdmin())
 		  header("location:javascript://history.go(-1)");
-	$stock = recup_liste_produits();  
+	$stock = recup_liste_produits(1); 
+	
 	$returnvalue = $returnvalue."<tbody>";
 	foreach($stock as $line){
 		$returnvalue = $returnvalue."<tr>";
@@ -24,9 +25,18 @@ include_once 'bdd/bdd.php';
 			$returnvalue = $returnvalue."<th>";
 			$returnvalue = $returnvalue."disponible";
 			$returnvalue = $returnvalue."</th>";
-			$returnvalue = $returnvalue."<th>";
-			$returnvalue = $returnvalue."<button class='btn btn-outline-warning' href='' role='button' >mettre en pause</button>";
-			$returnvalue = $returnvalue."</th>";
+			
+			if($line["Miseenattente"] != 1){
+					$returnvalue = $returnvalue."<th>";
+					$returnvalue = $returnvalue."<a class='btn btn-outline-warning' href='".sprintf("%s://%s%s",isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',$_SERVER['SERVER_NAME'],"")."/admin_produits.php?id=".$line["id_produits"]."&pause=1' role='link' >mettre en pause</a>";
+					$returnvalue = $returnvalue."</th>";
+			}else{
+					$returnvalue = $returnvalue."<th>";
+					$returnvalue = $returnvalue."<a class='btn btn-outline-warning' href='".sprintf("%s://%s%s",isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',$_SERVER['SERVER_NAME'],"")."/admin_produits.php?id=".$line["id_produits"]."&pause=0' role='link' >reprendre</a>";
+					$returnvalue = $returnvalue."</th>";
+				
+			}
+			
 			$returnvalue = $returnvalue."<th>";
 			$returnvalue = $returnvalue."<button class='btn btn-primary' href='' role='button' >modifier</button>";
 			$returnvalue = $returnvalue."</th>";

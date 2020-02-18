@@ -19,7 +19,6 @@
 
 
 function recup_produit($id) {
-
 	global $bdd; 
 
 	$sql = "SELECT * FROM produits WHERE id_produits = $id";
@@ -31,7 +30,8 @@ function recup_produit($id) {
 					"prix" => $row['prix'],
 					"ingredients" => $row['ingredients'],
 					"descriptif" => $row['descriptif'],
-					"type" => $row['type']
+					"type" => $row['type'],
+					"Miseenattente" => $row['Miseenpause']
 				];
 
 	return $resultat;
@@ -55,6 +55,7 @@ function recup_liste_produits_type($type) {
 	$resultat = [];
 	$res = mysqli_query($bdd,$sql);
 	while($row = mysqli_fetch_assoc($res)){
+		
 		$resultat[] = recup_produit($row['id_produits']);
 	}
 	return $resultat;
@@ -72,16 +73,21 @@ function recup_liste_produits_type($type) {
 
 
 
-function recup_liste_produits() {
+function recup_liste_produits($admin = 0) {
 
 	global $bdd; 
-
-	$sql = "SELECT * FROM produits";
+	if($admin == 1){
+		$sql = "SELECT * FROM produits";
+	}else{
+		$sql = "SELECT * FROM produits Where Miseenpause = 0";
+	}
 	$resultat = [];
 	$res = mysqli_query($bdd,$sql);
+	
 	while($row = mysqli_fetch_assoc($res)){
 		$resultat[] = recup_produit($row['id_produits']);
 	}
+	
 	return $resultat;
 }
 
@@ -101,7 +107,7 @@ function recup_liste_savon() {
 
 		global $bdd;
 
-		$sql = "SELECT * FROM produits WHERE type = 'savon'";
+		$sql = "SELECT * FROM produits WHERE type = 'savon' and Miseenpause = 0";
 		$resultat = [];
 		$res = mysqli_query($bdd,$sql);
 		while($row = mysqli_fetch_assoc($res)){
@@ -125,7 +131,7 @@ function recup_liste_baume() {
 
 		global $bdd;
 
-		$sql = "SELECT * FROM produits WHERE type = 'baume'";
+		$sql = "SELECT * FROM produits WHERE type = 'baume' and Miseenpause = 0 ";
 		$resultat = [];
 		$res = mysqli_query($bdd,$sql);
 		while($row = mysqli_fetch_assoc($res)){
@@ -150,7 +156,7 @@ function recup_liste_shampoing() {
 
 		global $bdd;	
 	
-		$sql = "SELECT * FROM produits WHERE type = 'shampoing'";
+		$sql = "SELECT * FROM produits WHERE type = 'shampoing' and Miseenpause = 0";
 		$resultat = [];
 		$res = mysqli_query($bdd,$sql);
 		while($row = mysqli_fetch_assoc($res)){
@@ -175,7 +181,7 @@ function recup_liste_savon_barbe() {
 
 		global $bdd;	
 	
-		$sql = "SELECT * FROM produits WHERE type = 'savon_barbe'";
+		$sql = "SELECT * FROM produits WHERE type = 'savon_barbe' and Miseenpause = 0";
 		$resultat = [];
 		$res = mysqli_query($bdd,$sql);
 		while($row = mysqli_fetch_assoc($res)){

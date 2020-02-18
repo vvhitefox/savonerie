@@ -4,15 +4,13 @@ include_once 'admin_header.php';
 ?>
 	<div class="container">
 		<h1>Liste des produits:</h1>
-		<div class="container">	
+		<div class="container">	kjgifivbb
 		<?php 
 			include_once '../bdd/bdd.php';
-			
+include $_SERVER['DOCUMENT_ROOT']."/controleur/stock_ajouter.php";
 		?>
 		</div>
 	</div>
-
-
 
 
 <?php
@@ -31,6 +29,9 @@ include_once 'admin_header.php';
 		</div>
 	</div>
 
+<?php
+include $_SERVER['DOCUMENT_ROOT']."/controleur/stock_ajouter.php";
+?>
 
 
 
