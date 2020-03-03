@@ -6,7 +6,7 @@ function pauseItem($id,$pause){
 	global $bdd;
 	print_r($id,$pause);
 	print_r("frfdsfsdfdsf");
-	$stmt = mysqli_prepare ($bdd,"UPDATE produits SET `Mise en attente` = ? WHERE id_produits = ?");
+	$stmt = mysqli_prepare ($bdd,"UPDATE produits SET `attente` = ? WHERE id_produits = ?");
 	$stmt->bind_param("ii",$pause,$id);
 	$stmt->execute();
 }                                                             

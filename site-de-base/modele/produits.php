@@ -31,7 +31,7 @@ function recup_produit($id) {
 					"ingredients" => $row['ingredients'],
 					"descriptif" => $row['descriptif'],
 					"type" => $row['type'],
-					"Miseenattente" => $row['Mise en attente']
+					"Miseenattente" => $row['attente']
 				];
 
 	return $resultat;
@@ -79,7 +79,7 @@ function recup_liste_produits($admin = 0) {
 	if($admin == 1){
 		$sql = "SELECT * FROM produits";
 	}else{
-		$sql = "SELECT * FROM produits Where `Mise en attente` != 1";
+		$sql = "SELECT * FROM produits Where `attente` != 1";
 	}
 	$resultat = [];
 	$res = mysqli_query($bdd,$sql);
