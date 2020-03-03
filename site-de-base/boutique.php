@@ -3,34 +3,41 @@
 ?>
 
 
-<div class="row">
-	<div class="col-sm-8 offset-sm-2 mt-3">
+	<div class="col-lg-8 offset-lg-2 col-12 mt-3">
+
 		<div class="card border">
 
-		  	<div class="card-header align-center d-flex justify-content-center bg-success text-white">
+		  	<div class="card-header align-center d-flex justify-content-center bg-dark text-white">
 		  	Recherche
 		  	</div>
 
 		  	<div class="card-body">
-		  		<form method="post" action="controleur/affiche_produits_boutique.php">
+
+		  		<form method="post" action="controlleur/affiche_produits_boutique.php">
+
 		  			<div class="row">
-					  	<select class="form-control col-sm-4" name="categorie" id="">
+
+					  	<select class="form-control col-lg-3 col-6" name="categorie" id="">
 						    <option value="toutes">Toutes les catégories</option>
-						    <option value="baume">Baume</option>
-						    <option value="savon">Savon</option>
-						    <option value="savon_barbe">Savons à barbe</option>
-						    <option value="shampoing">Shampoing</option>
+						    <option value="Baume">Baume</option>
+						    <option value="Savon">Savon</option>
+						    <option value="Savon à barbe">Savons à barbe</option>
+						    <option value="Shampoing">Shampoing</option>
 						</select>
-						<input class="form-control col-sm-4 ml-3" name="recherche" id="" placeholder="Rechercher...">
-						<input class="btn btn-outline-success offset-sm-1" type="submit" value="Rechercher">
+
+						<input class="form-control col-lg-3 offset-lg-1 d-none d-lg-block d-xs-none" name="recherche" id="" placeholder="Rechercher...">
+
+						<input class="form-control col-lg-3 offset-lg-1 col-6 btn btn-outline-success " type="submit" value="Rechercher">
+
 					</div>
+
 				</form>
+
 			</div>
+
 		</div>
 	</div>
-</div>
 
-<div class="row">
 	<div class="col-sm-8 offset-sm-2 mt-3">
 		<div class="row">
 
@@ -60,7 +67,6 @@
 		?>
 		</div>
 	</div>
-</div>
 
 <?php include_once("footer.php"); ?>
 

@@ -14,12 +14,12 @@ function sendEmail($mail){
 	
 	cree_table_newsletter();
 	
-	$stmt = mysqli_prepare($bdd,"INSERT INTO newsletter VALUES (NULL,?)");
+	$stmt = mysqli_prepare($bdd,"INSERT INTO newsletter (email) VALUES (?)");
 	if(!$stmt){ echo $bdd->error;return;}
 	$stmt->bind_param('s', $mail);
 	$stmt->execute();
 	$stmt->close();
 	
-	
+	header('Location: ../accueil.php');
 }
  ?>

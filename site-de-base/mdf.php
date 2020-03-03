@@ -1,14 +1,13 @@
 <?php include_once("header.php"); ?>
 
 
-<div class="row">
 
 	<div class="col-sm-8 offset-sm-2 mt-5 mb-5 text-center">
 		<h1>La fabrication</h1>
 	</div>
 
 	<div class="col-sm-8 offset-sm-2 mt-3 mb-3">
-		<p>Pour fabriquer un vrai savon, il y a deux méthodes :<p>
+		<p>Pour fabriquer un vrai savon, il y a deux méthodes :</p>
 	</div>
 
 	<div class="col-sm-8 offset-sm-2 mt-3 mb-3">
@@ -44,7 +43,7 @@
 		(Logo ) Surgras doux pour la peau 
 		(logo) Glycérine crée naturellement dans la fabrication
 		</p>
-	<p>NOS savons sont moulés à la main puis, une fois le mélange durci, découpés un a un  et mis à sécher au minimum pendant 4 à 6 semaines. Cette fabrication artisanale par saponification à froid d' ingrédients naturels et bio, garanti que mes savons ont conservé au maximum les propriétés et les principes actifs des ingrédients qui les composent.</p> 
+		<p>NOS savons sont moulés à la main puis, une fois le mélange durci, découpés un a un  et mis à sécher au minimum pendant 4 à 6 semaines. Cette fabrication artisanale par saponification à froid d' ingrédients naturels et bio, garanti que mes savons ont conservé au maximum les propriétés et les principes actifs des ingrédients qui les composent.</p> 
 	</div>
 
 	<div class="col-sm-8 offset-sm-2 mt-5 mb-5">
@@ -82,5 +81,6 @@
 		<p>L’huile de coco bio, très nourrissante, apportera au savon une mousse douce et onctueuse, pour les peaux sèches, abîmées et en manque d’élasticité.
 		</p>
 	</div>
+
 <?php include_once("footer.php"); ?>
 

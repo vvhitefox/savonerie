@@ -1,5 +1,5 @@
 <?php
-
+	include_once("bdd.php");
 	function cree_table_produits() {
 
 		global $bdd; 
@@ -19,11 +19,13 @@
 	}
 
 	function cree_table_newsletter() {
+
 		global $bdd; 
 
 		$sql = "CREATE TABLE IF NOT EXISTS newsletter
 				(id_email	INT AUTO_INCREMENT,
-				email			VARCHAR(100) NOT NULL
+				email			VARCHAR(100) NOT NULL,
+				CONSTRAINT pk_newsletter PRIMARY KEY (id_email)
 				);
 				";
 		mysqli_query($bdd,$sql);

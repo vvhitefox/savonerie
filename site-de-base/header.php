@@ -10,10 +10,13 @@
   	// Création des tableas dans la base de données
 
  	cree_table_produits();
+  cree_table_newsletter();
 
 ?>
+
 <!doctype html>
 <html lang="fr">
+<head>
  <meta charset="utf-8">
   <title>Titre de la page</title>
 
@@ -27,49 +30,46 @@
 
   <link rel="stylesheet" href="bootstrap/css/style.css">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 <body>
 
-<header class="background-vert d-flex align-items-center">
-	<div class="col-12 text-white text-center justify-content-center">
-		Le vrai sens
-	</div>
-</header>
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
 
+  <a class="navbar-brand" href="#">Le Vrai Sens</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<div class="corps-page container bg-white col-sm-8 offset-sm-2 pt-3">
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="accueil.php">Accueil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="boutique.php">Boutique</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          A propos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="a_propos.php">Historique</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="mdf.php">Méthodes de fabrication</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="contact.php">Nous contacter</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="admin/admin_index.php">Administrateur</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-	<div class="row col-sm-10 offset-sm-1 border rounded background-vert d-flex align-items-center">
-
-		<div class="col text-center">
-			<a class="text-white" href="accueil.php"> Accueil </a>
-		</div>
-
-		<div class="col text-center">
-			<a class="text-white" href="boutique.php"> Boutique </a>
-		</div>
-
-		<div class="col text-center">
-			<div class="dropdown show">
-				<a class="btn btn-secondary dropdown-toggle btn-success" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-					A propos 
-				</a>
-
-				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-				    <a class="dropdown-item" href="a_propos.php">Historique</a>
-				    <a class="dropdown-item" href="mdf.php">Méthodes de fabrication</a>
-				    <a class="dropdown-item" href="contact.php">Nous contacter</a>
-			  	</div>
-			</div>
-		</div>
-
-		<div class="col text-center">
-			<a class="text-white" href="admin_index.php"> Admin </a>
-		</div>
-
-	</div>
-
-
+<div class="corps-page">
 
 <!---------------------------------------->
 

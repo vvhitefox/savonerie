@@ -19,7 +19,6 @@
 
 
 function recup_produit($id) {
-
 	global $bdd; 
 
 	$sql = "SELECT * FROM produits WHERE id_produits = $id";
@@ -31,7 +30,8 @@ function recup_produit($id) {
 					"prix" => $row['prix'],
 					"ingredients" => $row['ingredients'],
 					"descriptif" => $row['descriptif'],
-					"type" => $row['type']
+					"type" => $row['type'],
+					"Miseenattente" => $row['Mise en attente']
 				];
 
 	return $resultat;
@@ -51,10 +51,11 @@ function recup_liste_produits_type($type) {
 
 	global $bdd; 
 
-	$sql = "SELECT * FROM produits WHERE type = '$type'";
+	$sql = "SELECT * FROM produits WHERE type = '$type' AND `Mise en attente` != 1";
 	$resultat = [];
 	$res = mysqli_query($bdd,$sql);
 	while($row = mysqli_fetch_assoc($res)){
+		
 		$resultat[] = recup_produit($row['id_produits']);
 	}
 	return $resultat;
@@ -72,16 +73,21 @@ function recup_liste_produits_type($type) {
 
 
 
-function recup_liste_produits() {
+function recup_liste_produits($admin = 0) {
 
 	global $bdd; 
-
-	$sql = "SELECT * FROM produits";
+	if($admin == 1){
+		$sql = "SELECT * FROM produits";
+	}else{
+		$sql = "SELECT * FROM produits Where `Mise en attente` != 1";
+	}
 	$resultat = [];
 	$res = mysqli_query($bdd,$sql);
+	
 	while($row = mysqli_fetch_assoc($res)){
 		$resultat[] = recup_produit($row['id_produits']);
 	}
+	
 	return $resultat;
 }
 
@@ -101,7 +107,7 @@ function recup_liste_savon() {
 
 		global $bdd;
 
-		$sql = "SELECT * FROM produits WHERE type = 'savon'";
+		$sql = "SELECT * FROM produits WHERE type = 'savon' and Miseenpause = 0";
 		$resultat = [];
 		$res = mysqli_query($bdd,$sql);
 		while($row = mysqli_fetch_assoc($res)){
@@ -125,7 +131,7 @@ function recup_liste_baume() {
 
 		global $bdd;
 
-		$sql = "SELECT * FROM produits WHERE type = 'baume'";
+		$sql = "SELECT * FROM produits WHERE type = 'baume' and Miseenpause = 0 ";
 		$resultat = [];
 		$res = mysqli_query($bdd,$sql);
 		while($row = mysqli_fetch_assoc($res)){
@@ -150,7 +156,7 @@ function recup_liste_shampoing() {
 
 		global $bdd;	
 	
-		$sql = "SELECT * FROM produits WHERE type = 'shampoing'";
+		$sql = "SELECT * FROM produits WHERE type = 'shampoing' and Miseenpause = 0";
 		$resultat = [];
 		$res = mysqli_query($bdd,$sql);
 		while($row = mysqli_fetch_assoc($res)){
@@ -175,7 +181,7 @@ function recup_liste_savon_barbe() {
 
 		global $bdd;	
 	
-		$sql = "SELECT * FROM produits WHERE type = 'savon_barbe'";
+		$sql = "SELECT * FROM produits WHERE type = 'savon_barbe' and Miseenpause = 0";
 		$resultat = [];
 		$res = mysqli_query($bdd,$sql);
 		while($row = mysqli_fetch_assoc($res)){
@@ -251,17 +257,14 @@ function affiche_tableau_produits($tab){
 
 			$chaine_id = (string)$val['id_produits'];
 
-			echo "	<div class='col-sm-6 mb-3 mt-3'>
+			echo "	<div class='col-lg-6 col-6 mb-3 mt-3'>
 						<div class='card'>
 							<a href='produit.php?id=". $chaine_id ."' >
 								<img src='https://www.lepetitmarseillais.com/sites/lpm_fr/files/taco-images/le-savon-de-marseille-le-produit-authentique-qui-a-tout-bon-ihp.jpg' class='card-img-top img-fluid mx-auto d-block' alt=''> 
 							</a>
 
 							<ul class='list-group list-group-flush'>
-								<li class='list-group-item'>". $val['nom'] ."</li>
-								<li class='list-group-item'>Description</li>
-								<li class='list-group-item'>Ingrédients : ". $val['ingredients'] ."</li>
-								<li class='list-group-item'>Prix : ". $val['prix'] ." &euro;</li>
+								<li class='list-group-item text-center'>". $val['nom'] ."</li>
 							</ul>
 						</div>
 					</div>";

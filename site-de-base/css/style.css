@@ -1,12 +1,10 @@
 
-@font-face {
-	font-family: 'quicksand';
-	src: url('Quicksand_book.otf') format('truetype');
-}
-
 body{
 	background-color: white;
-	font-family:quicksand, sans-serif;
+}
+
+.corps-page{
+	min-height: 50vh;
 }
 
 
@@ -15,13 +13,8 @@ body{
 }
 
 .carousel-item img{
-		height: auto;
+		height: 500px;
 	}
-
-
-.top_header{
-	height:5vh;
-}
 
 footer{
 	height: 5vh;
@@ -48,6 +41,10 @@ footer{
 
 @media (max-width: 767.98px) {
 
+	body{
+		font-size: 25px;
+	}
+
 	.carousel-item{
 		height: 300px;
 	}
@@ -57,3 +54,4 @@ footer{
 	}
 
 }
+

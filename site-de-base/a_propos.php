@@ -1,12 +1,11 @@
 <?php include_once("header.php"); ?>
 
-<div class="row">
 
-	<div class="col-sm-8 offset-sm-2 mt-5 mb-5">
+	<div class="col-lg-8 offset-lg-2 col-8 offset-2 mt-5 mb-5">
 			<h1>La Savonnerie</h1>
 	</div>
 
-	<div class="col-sm-8 offset-sm-2 mt-2 mb-2">
+	<div class="col-lg-8 offset-lg-2 col-8 offset-2 mt-2 mb-2">
 		<p>La Savonnerie Le Vrai Sens est situé dans le cœur du massif de la Chartreuse en Savoie, dans un petit village, à la campagne, à  St Thibaud de couz.</p>
 
 		<p>J’ai 36 ans, mariée, maman de deux enfants, suite à un intérêt grandissant pour améliorer mon mode de vie et celui de ma famille, on se lance dans  une quête de sens vers une vie plus seine et plus respectueuse de l’environnement, ainsi les prises de conscience se sont enchainées :</p>
@@ -23,5 +22,6 @@
 
 		<p>Nous sommes producteurs de savons et de cosmétiques de qualité issus d’une fabrication artisanale et responsable.</p>
 	</div>
+
 
 <?php include_once("footer.php"); ?>
