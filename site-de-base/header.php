@@ -24,7 +24,9 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
 
   <!-- Fichier CSS -->
 
@@ -66,6 +68,11 @@
         <a class="nav-link" href="admin/admin_index.php">Administrateur</a>
       </li>
     </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li> <a href="panier.php"> <i class="fas fa-shopping-cart fa-2x" style="color: white; vertical-align: bottom;"></i><span class="badge badge-light"><?php echo nombre_articles_panier() ;?></span> </a> </li>
+    </ul>
+
   </div>
 </nav>
 

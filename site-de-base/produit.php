@@ -32,16 +32,17 @@
 					<img src='https://www.lepetitmarseillais.com/sites/lpm_fr/files/taco-images/le-savon-de-marseille-le-produit-authentique-qui-a-tout-bon-ihp.jpg' class='card-img-top img-fluid mx-auto d-block img-thumbnail' alt=''>
 
 
-					<form>
+					<form method="post" action="controlleur/ajout_panier.php">
 
 					  <div class="form-row mt-3">
 
 					    <div class="col-lg-5 col-6">
-					      	<input type="number" class="form-control" placeholder="0" min="0">
+					      	<input type="number" class="form-control" placeholder="1" min="1" name="quantite">
 					    </div>
 
 					    <div class="col-lg-5 offset-lg-2 col-6">
-					      	<button type="submit" class="form-control btn btn-success d-flex align-items-center justify-content-center"> <b> <?php echo $produit['prix']." €" ?> </b> <i class="material-icons ml-2">shopping_cart</i> </button>
+					    	<input type="hidden" name="id" value="<?php echo $produit['id_produits'] ;?>">
+					      	<button type="submit" class="form-control btn btn-success d-flex align-items-center justify-content-center"> <b> <?php echo $produit['prix']." €" ?> </b> <i class="fas fa-shopping-cart ml-2" style="color: white; vertical-align: middle;"></i> </button>
 					    </div>
 
 					  </div>
@@ -97,6 +98,8 @@
 			</div> 
 
 		</div>
+
+		
 
 
 <?php include_once("footer.php"); ?>

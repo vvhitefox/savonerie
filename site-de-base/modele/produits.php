@@ -236,6 +236,97 @@ function recup_liste_tri_nom($tab, $chaine){
     return $resultat;
 }
 
+// Cette fonction ajoute un produit ainsi qu'une certaine quantité de le panier de l'utilisateur
+
+// Cette fonction prend en paramètre un entier $id qui correspond à l'identifient du produit ainsi qu'un entier $quantite
+
+// Elle ne retourne rien, mais ajoute le ou les produits dans une variable $_SESSION attribuée à l'utilisateur
+
+function ajoute_produit_panier($id, $quantite){
+
+	$i = -1;
+	$j = 0;
+
+	if (isset($_SESSION['panier'])){
+
+		foreach ($_SESSION['panier'] as $val) {
+			
+			if ( $id == $val['produit']['id_produits'] ){
+				$i = $j;
+			}
+
+			$j++;
+		}
+
+		if ( $i == -1 ){
+
+			$produit = recup_produit($id);
+			$_SESSION["panier"][] = [
+				'produit' => $produit, 
+				'quantite' => $quantite
+			];
+
+		}
+
+		else{
+
+		$_SESSION['panier'][$i]['quantite'] = (int)$_SESSION['panier'][$i]['quantite'] + $quantite;
+
+		}
+
+
+	}
+
+	else {
+
+		$produit = recup_produit($id);
+			$_SESSION["panier"][] = [
+				'produit' => $produit, 
+				'quantite' => $quantite
+			];
+
+	}
+
+	
+
+}
+
+function vider_panier(){
+
+	unset($_SESSION['panier']);
+
+}
+
+function affiche_panier(){
+
+	foreach ($_SESSION['panier'] as $val) {
+
+			echo "	<div class='card-body'>
+						<h5 class='card-title'>". $val['produit']['nom'] ."</h5>
+						<p class='card-text'>Quantité : ". $val['quantite'] ."</p>
+					</div>";
+		}
+
+}
+
+function nombre_articles_panier(){
+
+	$res = 0;
+
+	if(isset($_SESSION['panier'])){
+
+		foreach ($_SESSION['panier'] as $val) {
+
+				$res = $res + $val['quantite'];
+
+		}
+
+	}
+
+	return $res;
+
+}
+
 
 
 

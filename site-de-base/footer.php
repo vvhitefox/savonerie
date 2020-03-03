@@ -38,6 +38,7 @@
 						alert("Veuillez entrer une adresse mail valide !");
 				}
 		</script>
+		
 
 	<footer class="bg-dark d-flex align-items-center">
 		
