@@ -35,7 +35,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="index.php">Le Vrai Sens</a>
+          <a class="brand" href="../index.php">Le Vrai Sens</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="admin_index.php">Home</a></li>
@@ -47,5 +47,3 @@
       </div>
     </div>
   </head>
-  <body>
-    
