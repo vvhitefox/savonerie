@@ -70,7 +70,7 @@
     </ul>
 
     <ul class="nav navbar-nav navbar-right">
-      <li> <a href="panier.php"> <i class="fas fa-shopping-cart fa-2x" style="color: white; vertical-align: bottom;"></i><span class="badge badge-light"><?php echo nombre_articles_panier() ;?></span> </a> </li>
+      <li> <a href="panier.php"> <i class="fas fa-shopping-cart fa-2x" style="color: white; vertical-align: bottom;"></i><span class="badge badge-pill badge-light"><?php echo nombre_articles_panier() ;?></span> </a> </li>
     </ul>
 
   </div>

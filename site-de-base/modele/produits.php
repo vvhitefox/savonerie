@@ -303,7 +303,39 @@ function affiche_panier(){
 
 			echo "	<div class='card-body'>
 						<h5 class='card-title'>". $val['produit']['nom'] ."</h5>
-						<p class='card-text'>Quantité : ". $val['quantite'] ."</p>
+						<div class='row'>
+							<div class='col-lg-3'>
+								<p class='card-text'>Quantité : ". $val['quantite'] ."</p>
+							</div>
+
+							<div class='col-lg-4'>
+								<form method='post' action='controlleur/modifier_quantite_article.php'>
+									<div class='input-group'>
+										<div class='input-group-prepend'>
+										    <span class='input-group-text' id=''>Modifier</span>
+										</div>
+										 <input type='text' class='form-control' name='quantite' value='". $val['quantite'] ."'>
+										<button type='submit' class='btn btn-outline-dark btn-sm mr-2 ml-2'><i class='fas fa-angle-right'></i></button>
+									</div>
+									<input type='hidden' name='id' value='". $val['produit']['id_produits'] ."'>
+								</form>
+							</div>
+							
+
+
+							<div class='col-lg-1 offset-lg-4'>
+								<form method='post' action='controlleur/suppression_article_panier.php'>
+									<input type='hidden' name='id' value='". $val['produit']['id_produits'] ."'>
+									<button type='submit' class='btn btn-outline-dark btn-sm'><i class='fas fa-trash' style=''></i></button>
+								</form>
+							</div>
+							
+						</div>
+						<div class='row'>
+							<div class='col-lg-3'>
+								". total_cout_article($val) ." €
+							</div>
+						</div>
 					</div>";
 		}
 
@@ -325,6 +357,28 @@ function nombre_articles_panier(){
 
 	return $res;
 
+}
+
+function total_cout_article($case_tableau){
+
+	$res = $case_tableau['quantite'] * $case_tableau['produit']['prix'];
+
+
+	return number_format($res,2,"."," ");
+}
+
+
+function total_cout_panier(){
+
+	$res = 0.00;
+
+	foreach ($_SESSION['panier'] as $val) {
+		
+		$res = $res + ($val['quantite'] * $val['produit']['prix']);
+
+	}
+
+	return number_format($res,2,"."," ");
 }
 
 
