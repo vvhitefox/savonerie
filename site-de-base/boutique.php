@@ -14,7 +14,7 @@
 
 		  	<div class="card-body">
 
-		  		<form method="post" action="controlleur/affiche_produits_boutique.php">
+		  		<form method="post" action="controlleur/affiche_produits_boutique.php" id="formulaire">
 
 		  			<div class="row">
 
