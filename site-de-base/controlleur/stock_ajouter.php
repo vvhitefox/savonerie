@@ -1,6 +1,7 @@
 <?php 
 include_once "../bdd/bdd.php";
-                                                          
+include_once '../modele/produits.php';
+                                                         
 
 	function ajouterProduit($nom,$prix,$ingredients,$descriptif,$type){
 	global $bdd;

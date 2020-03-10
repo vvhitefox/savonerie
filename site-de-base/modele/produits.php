@@ -16,6 +16,24 @@
 // descriptif : string, description de ce produit
 // type : string, type du produit qui est retourné
 
+function recup_types_list() {
+	global $bdd;
+
+	$sql = "SELECT * FROM `typeproduits`";
+	$resultat = [];
+	$res = mysqli_query($bdd,$sql);
+	$row = mysqli_fetch_assoc($res);	
+	$i = 0;
+	while($row = mysqli_fetch_assoc($res)){
+		
+	$resultat[$i] = [ 	"nom" => $row['nom'] 
+					];
+					$i++;
+	}
+
+	return $resultat;
+}
+
 
 
 function recup_produit($id) {
