@@ -27,7 +27,6 @@ require "../vue/select_product_types.php"
     else{
         document.getElementById("type").style.display="block";
 	document.getElementById("type2").style.display="none";
-	document.getElementById("label").style.display="none";
 	}
 	}
 
