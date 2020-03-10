@@ -27,6 +27,8 @@
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap&subset=latin-ext" rel="stylesheet"> 
+
 
   <!-- Fichier CSS -->
 
@@ -45,12 +47,21 @@
 
 <div class="container-fluid sticky-top shadow">
   <div class="row bg-white">
-    <div class="col-lg-8 offset-lg-2">
+    <div class="col-lg-8 col-12 offset-lg-2 offset-0">
       <nav class="navbar navbar-expand-lg navbar-dark" >
 
         <a class="navbar-brand text-dark" href="accueil.php">Le Vrai Sens</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+
+        <ul class="navbar-nav d-block d-lg-none ml-auto">
+          <li class="nav-item pr-2">
+            <a href="panier.php"> <i class="fas fa-shopping-cart fa-2x text-dark" style="color: white; vertical-align: bottom;"></i><span class="badge badge-success"><?php echo nombre_articles_panier() ;?></span> </a>
+          </li>
+        </ul>
+
+        <button class="navbar-toggler m-0 p-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            <i class="fas fa-bars" style="color:black; font-size:28px;"></i>
+          </span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -75,7 +86,7 @@
             </li>
           </ul>
 
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right d-none d-lg-block">
             <li> <a href="panier.php"> <i class="fas fa-shopping-cart fa-2x text-dark" style="color: white; vertical-align: bottom;"></i><span class="badge badge-success"><?php echo nombre_articles_panier() ;?></span> </a> </li>
           </ul>
 

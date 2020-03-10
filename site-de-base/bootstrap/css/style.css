@@ -1,12 +1,16 @@
 
 @font-face {
-	font-family: 'quicksand';
-	src: url('Quicksand_book.otf') format('truetype');
+	font-family: 'Lato', sans-serif;
+	
 }
 
 body{
 	background-color: white;
-	font-family:quicksand, sans-serif;
+	font-family: 'Lato', sans-serif;
+}
+
+img{
+	height: 50%;
 }
 
 .img-carousel{
@@ -16,6 +20,16 @@ body{
 .carousel-item{
 	height: 500px;
 }
+
+.navbar-light .navbar-toggler-icon{
+	color: black !important
+}
+
+.navbar a:hover{
+	transition-duration: 0.25s;
+	opacity: 0.50;
+}
+
 
 
 .bg-1{
@@ -68,5 +82,7 @@ footer{
 	.carousel-item img{
 		height: 300px;
 	}
+
+
 
 }

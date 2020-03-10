@@ -40,16 +40,19 @@
 
 							<div class='row'>
 
-								
-								<div class='col-lg-2'>
+								<div class='col-lg-2 offset-lg-5 text-center pb-3 pt-3'>
 								    Coût total : ". total_cout_panier() ." €
 								</div>
 
-								<div class='col-lg-3'>
+							</div>
+
+							<div class='row'>
+
+								<div class='col-lg-5 col-5 offset-lg-1 offset-1'>
 								    <a href='controlleur/creation_paiement.php'><button class='form-control btn btn-outline-success'>Payer</button></a>
 								</div>
 
-								<div class='col-lg-2 offset-lg-5'>
+								<div class='col-lg-5 col-5'>
 								    <a href='controlleur/vider_panier.php'><button type='submit' class='form-control btn btn-outline-danger'>Vider</button></a>
 								</div>
 			

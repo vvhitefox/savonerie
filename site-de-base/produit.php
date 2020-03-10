@@ -37,7 +37,7 @@
 					  <div class="form-row mt-3">
 
 					    <div class="col-lg-5 col-6">
-					      	<input type="number" class="form-control" placeholder="1" min="1" name="quantite">
+					      	<input type="number" class="form-control" placeholder="1" min="1" value="1" name="quantite">
 					    </div>
 
 					    <div class="col-lg-5 offset-lg-2 col-6">

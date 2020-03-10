@@ -53,7 +53,7 @@ try {
              "value" => $prix
         ], 
         "description" => " Order #{$orderId} description : toto", 
-        "redirectUrl" => "{$protocol}://{$hostname}{$path}/payments/return.php?order_id={$orderId}", 
+        "redirectUrl" => "{$protocol}://{$hostname}{$path}/vider_panier.php?order_id={$orderId}", 
         "webhookUrl" => "{$protocol}://{$hostname}{$path}/payments/webhook.php", 
         "metadata" => [
             "order_id" => $orderId,

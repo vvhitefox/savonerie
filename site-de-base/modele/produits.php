@@ -51,7 +51,7 @@ function recup_liste_produits_type($type) {
 
 	global $bdd; 
 
-	$sql = "SELECT * FROM produits WHERE type = '$type' AND `Mise en attente` != 1";
+	$sql = "SELECT * FROM produits WHERE type = '$type' AND `attente` != 1";
 	$resultat = [];
 	$res = mysqli_query($bdd,$sql);
 	while($row = mysqli_fetch_assoc($res)){
@@ -304,11 +304,11 @@ function affiche_panier(){
 			echo "	<div class='card-body'>
 						<h5 class='card-title'>". $val['produit']['nom'] ."</h5>
 						<div class='row'>
-							<div class='col-lg-3'>
-								<p class='card-text'>Quantité : ". $val['quantite'] ."</p>
+							<div class='col-lg-3 col-12'>
+								<p class='card-text'>Nombre : ". $val['quantite'] ."</p>
 							</div>
 
-							<div class='col-lg-4'>
+							<div class='col-lg-4 col-8 pt-3 pb-3'>
 								<form method='post' action='controlleur/modifier_quantite_article.php'>
 									<div class='input-group'>
 										<div class='input-group-prepend'>
@@ -323,7 +323,7 @@ function affiche_panier(){
 							
 
 
-							<div class='col-lg-1 offset-lg-4'>
+							<div class='col-lg-1 offset-lg-4 col-2 offset-2 pb-3 pt-3'>
 								<form method='post' action='controlleur/suppression_article_panier.php'>
 									<input type='hidden' name='id' value='". $val['produit']['id_produits'] ."'>
 									<button type='submit' class='btn btn-outline-dark btn-sm'><i class='fas fa-trash' style=''></i></button>
