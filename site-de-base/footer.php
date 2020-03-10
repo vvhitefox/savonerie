@@ -40,7 +40,52 @@
 		</script>
 		
 
-	<footer class="bg-dark d-flex align-items-center">
+	<footer class="container-fluid">
+
+			<div class="row">
+				<hr class="col-lg-8 col-8 separator">
+			</div>
+
+			<div class="mb-5 mt-5">
+				<div class="row">
+					<div class="col-lg-2 offset-lg-5 mb-2">
+						<img src="img/logo_sens.png" class="img-fluid" alt="Responsive image">
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-lg-4 offset-lg-4 col-10 offset-1 mt-3 mb-3">
+						<div class="card border">
+
+						  	<div class="card-header align-center d-flex justify-content-center bg-grey text-dark">
+						  	NEWSLETTER
+						  	</div>
+
+						  	<div class="card-body">
+
+						  		<form method="post" action="modele/sendEmail.php" id="postform">
+						  			<div class="row">
+										 <input name = "email" class = "form-control col-lg-6 offset-lg-3 col-6"  onkeyup="ValidateEmail()" id="champemail" placeholder="Email" />
+										<input type="submit" class="btn btn-outline-success col-lg-2 col-5 offset-1 disabled" onclick="sendEmail()" id="boutonvalidation" value="s'inscrire" style="float:left">
+									</div>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<hr class="col-lg-8 col-8 separator">
+			</div>
+
+			<div class="row mb-5 mt-5">
+				<div class="col-lg-6 offset-lg-3 text-center">
+					<div> MENTION LEGALES </div>
+				</div>	
+			</div>
 		
 	</footer>
 

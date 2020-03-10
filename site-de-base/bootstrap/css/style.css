@@ -9,14 +9,23 @@ body{
 	font-family:quicksand, sans-serif;
 }
 
+.img-carousel{
+  height:500px;
+}
 
 .carousel-item{
 	height: 500px;
 }
 
-.carousel-item img{
-		height: auto;
-	}
+
+.bg-1{
+	background-color: #ffe7fd;
+}
+
+.bg-2{
+	background-color: #e8e8e8;
+}
+
 
 
 .top_header{
