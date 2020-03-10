@@ -1,5 +1,6 @@
 <?php 
 	include_once("header.php");
+	include_once("vue/select_product_types.php");
 ?>
 
 
@@ -17,13 +18,7 @@
 
 		  			<div class="row">
 
-					  	<select class="form-control col-lg-3 col-6" name="categorie" id="">
-						    <option value="toutes">Toutes les catégories</option>
-						    <option value="Baume">Baume</option>
-						    <option value="Savon">Savon</option>
-						    <option value="Savon à barbe">Savons à barbe</option>
-						    <option value="Shampoing">Shampoing</option>
-						</select>
+					  	<?php echo show_select(); ?>
 
 						<input class="form-control col-lg-3 offset-lg-1 d-none d-lg-block d-xs-none" name="recherche" id="" placeholder="Rechercher...">
 
